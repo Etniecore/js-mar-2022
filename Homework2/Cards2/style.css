@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+}
+.service{
+    height: 100px;
+    width:100%;
+    background: white;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    font-family: Calibri, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    height: 400px;
+    width: 100%;
+    background: #56c3b7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.star {
+    height: 350px;
+    width: 15%;
+    background: white;
+    color: black;
+    border: 2px solid gainsboro;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.symbol{
+    height: 20%;
+    width: 100%;
+    background: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: silver;
+}
+.numb{
+    height: 5%;
+    width: 100%;
+    background: #ffffff;
+    font-size: 20px;
+    color: #a3754c;
+    text-align: center;
+    font-weight: bold;
+    }
+.text{
+    height: 40%;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    word-spacing: 3px;
+    color: silver;
+    font-size: 15px;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+}
+.key{
+    background: #56c3b7;
+    height: 10%;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Calibri, sans-serif;
+}

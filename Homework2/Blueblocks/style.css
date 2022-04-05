@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-size: 30px;
+}
+
+.widgets {
+    background: #246abc;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.blocks {
+    background: cadetblue;
+    height: 300px;
+    display: flex;
+}
+
+.widt {
+    background: #18467b;
+    height: 300px;
+    width: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+
+
+}
+
+.contact {
+    background: #246abc;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}

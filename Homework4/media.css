@@ -1,0 +1,22 @@
+@media screen and (min-width: 0) and (max-width: 450px) and (min-height: 0) and (max-height: 920px){
+    .top {
+        height: 100px;
+        width: 100%;
+
+    }
+    .bottom{
+        flex-direction: column;
+    }
+.boxes{
+    height: 300px;
+    width: 100%;
+
+}
+.tail{
+    height: 300px;
+    width: 100%;
+}
+}
+
+
+

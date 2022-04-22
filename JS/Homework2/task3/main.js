@@ -1,4 +1,4 @@
-let indexNumber = prompt("Enter index number, please");
+let indexNumber = +prompt("Enter index number, please");
 switch (indexNumber) {
     case '1':
         document.write(`<div>Monday</div>`);

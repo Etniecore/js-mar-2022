@@ -1,4 +1,3 @@
-let x = 7;
 let a = prompt( 'Enter the number')
 if (a >= 1) {
     console.log('Вірно');

@@ -1,4 +1,4 @@
-let time = prompt('Enter a number');
+let time = +prompt('Enter a number');
 if (time >=0 && time <=15) {
     console.log('First quater')
 }

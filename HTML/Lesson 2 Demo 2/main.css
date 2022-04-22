@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+.wid{
+    background: #246abc;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+
+}
+.blocks{
+    background: red;
+    height: 350px;
+    display: flex;
+}
+.aim{
+    background: #18467b;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+.contact{
+    background: #246abc;
+    height: 400px;
+    font-size: 50px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

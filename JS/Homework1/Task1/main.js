@@ -74,15 +74,15 @@ let bookTwo = {
     pages: 305,
     authors: ['Franz Kafka', 'Max Brod', 'Edwin Muir']
 }
-let firstName = 'Bohdan'
-let middleName = 'Miroslawovich'
-let lastName = 'Zavadovskyi'
-let person = lastName + firstName + middleName
+let firstName = 'Bohdan';
+let middleName = 'Miroslawovich';
+let lastName = 'Zavadovskyi';
+let person = lastName + ' ' + firstName + ' ' + middleName
+console.log(person);
 
-
-let name = prompt( 'Імя', 'Bohdan');
-let midName = prompt('По батькові', 'Miroslawovich');
-let age = prompt( 'Вік',25);
+let name = prompt('Your name');
+let midName = prompt( 'Your middle name');
+let age = prompt('How old are you?');
 console.log(`${name} ${midName} ${age}`);
 
 a = 100;
@@ -98,8 +98,7 @@ let books = [
     { name: 'Nineteen Eighty-Four', pages: 325, genre: 'dystopian', author: 'George Orwell'},
     { name: 'Nothern Lights', page:399, genre: 'novel', author: 'Philip Pullman'}
 ]
-console.log(books[0])
-console.log(books[1])
-console.log(books[2])
-
+console.log(books[0]);
+console.log(books[1]);
+console.log(books[2]);
 

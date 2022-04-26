@@ -1,7 +1,14 @@
-let a = 5
-console.log(a);
+let customers = [
+    {name: `Chris`, age: 20, status: true},
+    {name: `Erika`, age: 24, status: false},
+    {name: `John`, age: 43, status: false},
+    {name: `Sam`, age: 34, status: true},
+    {name: `Clara`, age: 53, status: true}
+];
 
-let matrix = [ `a`, `b`, [ `aa`, `bb`, `cc`], `c`];
-console.log(matrix[2], length);
-console.log(matrix[2][2]);
-console.log((13 % 4));
+document.write(`<ul>`)
+
+for (let customer of customers) {
+    document.write(`<li>${customer.name} ${customer.age} ${customer.status}</li>`)
+}
+document.write(`</ul>`)

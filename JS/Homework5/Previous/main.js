@@ -1,20 +1,19 @@
+// Переробити на стрілочні функції з попереднього дз
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-function squareP (a,b) {
-    return a * b;
-}
+let squareP = (a,b) => a * b;
+console.log(squareP(10,2));
+
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
-function roundS (r) {
-    let pi = 3.14;
-    return pi * r;
-}
+let roundS= (r) => 3.14 * r * r;
+console.log(roundS(2));
+
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-function cylinderS(h,r) {
-    let pi = 3.14;
-    return 2 * pi * r * (h +r);
-}
+let cylilnderS = (h,r) => 3.14 * h * r * 2;
+console.log(cylilnderS(2,4));
+
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
 let products = [
@@ -40,41 +39,39 @@ let products = [
     }
 ];
 
-function arrayFunc (array) {
-    for (let arrayItem of array) {
-        console.log(`${arrayItem.title} ${arrayItem.price} ${arrayItem.image}`);
+let arrayFunc = (array) => {
+    for (let item of array) {
+console.log(`${item.title} ${item.price} ${item.image}`)
     }
 }
 arrayFunc(products);
 
-// - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+// // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
-function paragraph (text) {
-    document.write(`<p>${text}</p>`)
-}
-paragraph('Hello');
+let textCreator = (text) => document.write(`<p>${text}</p>`);
+textCreator(`Hello okten`);
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
-function li (text) {
+let ulCreator = (text) => {
     document.write(`<ul>`)
     for (let i = 0; i < 3; i++) {
         document.write(`<li>${text}</li>`);
     }
     document.write(`</ul>`)
 }
-li(`test`);
+ulCreator(`Hello there`)
 
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим
+// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
-function lists (text,amount) {
+let listCreator = (text, amount) => {
     document.write(`<ul>`)
     for (let i = 0; i < amount; i++) {
-        document.write(`<li>${text}</li>`)
+        document.write(`<li>${text}</li>`);
     }
-    document.write(`</ul>`);
+    document.write(`</ul>`)
 }
-lists(`hello`, 5);
+listCreator(`Text`, 5);
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
@@ -92,16 +89,17 @@ let customers = [
     {name: `Clark`, age: 31, status: true}
 ];
 
-function listCreator(array) {
-    document.write(`<ul>`)
-    for (const items of array) {
-        document.write(`<li>${items.name} ${items.age} ${items.status}</li>`);
+let userList = (array) => {
+   document.write(`<ul>`);
+    for (let item of array) {
+        document.write(`<li>${item.name}${item.age}${item.status}</li>`)
     }
-document.write(`</ul>`)
+   document.write(`</ul>`);
 }
-listCreator(customers);
+userList(customers);
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+
 let visitors = [
     {id:4042 ,name: `Chris`, age: 20},
     {id:4022 ,name: `Erika`, age: 24},
@@ -114,46 +112,41 @@ let visitors = [
     {id:4050 ,name: `Dave`, age: 23},
     {id:4009 ,name: `Jason`, age: 52},
     {id:4001 ,name: `Clark`, age: 31}
-    ]
+];
 
-function divCreator (array) {
+let visitorsList = (array) => {
     document.write(`<div>`);
     for (const item of array) {
         document.write(`<div>${item.id} ${item.name} ${item.age}</div>`)
     }
     document.write(`</div>`);
 }
-
-divCreator(visitors);
+visitorsList(visitors);
 
 // - створити функцію яка повертає найменьше число з масиву
 
 let numbers= [1,2,7,9,-5,20,30,40,80];
-
-function lessOf(array){
-    let minNum = array[0];
-    for(let i = 0; i < array.length; i++){
-        if(array[i] < minNum){
-            minNum = array[i];
+let lessOf = (array)=> {
+    let minNumb = array[0];
+    for (let i = 0; i < array.length; i++){
+        if(array[i] < minNumb){
+            minNumb = array[i];
         }
     }
-    return minNum;
+    return minNumb;
 }
+let result = lessOf(numbers);
+console.log(result);
 
-console.log(lessOf(numbers));
+
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 
-function addOf (array) {
+let addOf = (array) => {
     let initial = array[0];
-    for (const item of array) {
-        initial += item;
+    for (let i = 0; i < array.length; i++){
+        initial += array[i];
     }
     return initial;
 }
-
 console.log(addOf(numbers));
-
-
-
-

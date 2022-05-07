@@ -17,6 +17,7 @@ let random = (size) => {
     let empty = [];
     for(let i = 0; i < size; i++){
         empty[i] = Math.round(Math.random()*100);
+        // empty.push(Math.random(Math.random()*100));
     }
     return empty;
 }
@@ -26,7 +27,7 @@ console.log(random(10));
 
 let randomNumb = (size, limit) => {
     let arr = [0];
-    for( let i =0; i < size; i++){
+    for( let i = 0; i < size; i++){
         arr[i] = Math.round(Math.random()*limit);
     }
     return arr;
@@ -34,7 +35,12 @@ let randomNumb = (size, limit) => {
 console.log(randomNumb(10,100));
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
-let reverse = (array) => console.log(array.reverse());
+let reverse = (array) =>{
+    let newArray = [];
+    for (let i = array.length - 1; let j = 0; i >= 0; i--; j++) {
+        newArray[j] = array[i];
+    };
+return newArray;
+    }
+};
 reverse(numbers);
-
-

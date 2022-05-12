@@ -19,7 +19,7 @@ console.log(course.toUpperCase());
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 let dirtyStr = ' dirty string   '
 console.log(dirtyStr);
-let cleanStr = dirtyStr.replaceAll(' ', '');
+let cleanStr = dirtyStr.trim();
 console.log(cleanStr);
 
 
@@ -27,10 +27,10 @@ console.log(cleanStr);
 //     let str = 'Ревуть воли як ясла повні';
 // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 let str = 'Ревуть воли як ясла повні';
-let stringToarray = (string) => {
+let stringToArray = (string) => {
     return string.split(` `);
 }
-console.log(stringToarray(str));
+console.log(stringToArray(str));
 
 //
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
@@ -38,6 +38,7 @@ let numbersArray = [10, 8, -7, 55, 987, -1011, 0, 1050, 0];
 let mapping = numbersArray.map(function (item) {
     item = item + ' ';
     return item;
+    // item.toString() alternative way
 })
 console.log(mapping);
 

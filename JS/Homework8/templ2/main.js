@@ -4,6 +4,9 @@
 
 const mainHeader = document.getElementById('main_header');
 mainHeader.classList.add('javascript');
+// or
+// mainHeader.setAttribute('class', 'java'); it will erase previos classes;
+// mainHeader.className = 'Python';
 console.log(mainHeader);
 // b) робить шириниу елементу ul 400px
 const ul = document.getElementsByTagName('ul');
@@ -25,7 +28,7 @@ const text = document.getElementsByClassName('listElement2');
     const lists = document.getElementsByTagName('li');
     console.log(lists);
     for (const item of lists) {
-        item.style.background = 'silver'
+        item.style.background = 'silver';
 }
 // f) отримує всі елементи 'a' та додає їм клас anchor
 const ref = document.getElementsByTagName('a');
@@ -37,7 +40,7 @@ console.log(ref);
 // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
 for (const item of ref) {
     if(item.innerText === 'link3'){
-        item.style.fontSize = '40px'
+        item.style.fontSize = '40px';
     }
 }
 // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
@@ -51,16 +54,18 @@ for (const item of header) {
     item.style.background = prompt(`choose the color, please`);
 }
 // j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+let textColor = prompt('Color of the text')
 for (const item of header) {
     if(item.innerText === 'content 2 segment'){
-        item.style.color = prompt('Color of the text');
+        item.style.color = textColor;
     }
 }
 // k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+let color = prompt('Enter the message');
 const block = document.getElementsByClassName('content_1');
 console.log(block);
 for (const item of block) {
-    item.innerText = prompt('Enter the message')
+    item.innerText = color;
 }
 // l) отримати елементи p та змінити їм padding на 20px
 const paragraphs = document.getElementsByTagName('p');
@@ -71,5 +76,14 @@ for (const item of paragraphs) {
 // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year. Пример sep-2021)
 const texting = document.getElementsByClassName('text2');
 for (const item of texting) {
-    item.innerText = 'march-2022'
+    item.innerText = 'march-2022';
 }
+// recursive method===
+// function rec(start){
+//     console.log(start);
+//     let children = start.children;
+//     for (const child of children) {
+//         rec(child);
+//     }
+// }
+// rec(document.body)

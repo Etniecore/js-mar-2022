@@ -20,6 +20,13 @@ for (const item of lists) {
 }
 content.style.background = 'red';
 rules.style.background = 'red';
+// or
+// const body = document.querySelectorAll('*')
+// for (const item of body) {
+//     item.style.color = 'red';
+// }
+// or
+// const body = document.body.children
 // -- змініть кожному елементу колір тексту на синій
 for (const item of lists) {
     item.style.color = 'blue';

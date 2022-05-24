@@ -140,101 +140,38 @@
 // console.log(addOf(numbers));
 
 
-const coursesArray = [
-    {
-        title: 'JavaScript Complex',
-        monthDuration: 5,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-    },
-    {
-        title: 'Java Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
-    },
-    {
-        title: 'Python Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
-    },
-    {
-        title: 'QA Complex',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-    },
-    {
-        title: 'FullStack',
-        monthDuration: 7,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
-            'python',
-            'java']
-    },
-    {
-        title: 'Frontend',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-    }
-];
 
-// cтворити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
-// Приклад структири знаходиться у файлі example.png
+// function two(...nums){
+//     let result = 0;
+//     for(let item of nums){
+//         result = result + item;
+//     }
+//     return result;
+// }
+//
+// console.log(two(1, 2, 3, 4, 5));
 
-const wrap = document.createElement('div');
-wrap.classList.add('wrap');
-document.body.appendChild(wrap);
-for (const item of coursesArray) {
-    const block = document.createElement('div');
-    block.innerHTML = `<div>${item.title} </div> <div>${item.monthDuration}</div> <div>${item.hourDuration}</div><div class ='list'>${item.modules}</div>`
-    wrap.appendChild(block)
+
+
+
+
+
+// - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
+//
+//
+
+const div = document.getElementById('text');
+console.log(div);
+const button = document.forms.f1;
+console.log(button);
+button.onsubmit = function (ec){
+    ec.preventDefault();
+    div.innerHTML = '';
+    div.style.background = 'white';
+    div.style.border = '0px';
+    div.style.height = '0px';
+    div.style.width = '0px';
 }
-const list = document.createElement('ul');
-for (const item in coursesArray) {
-    const li = document.createElement('li');
-    li.innerHTML = `${item}`;
-    list.appendChild(li);
-}
-wrap.appendChild(list);
-
-
-
-
-
-
-
 
 
 

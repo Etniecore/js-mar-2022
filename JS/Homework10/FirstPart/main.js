@@ -13,6 +13,8 @@ button.onsubmit = function (e){
     div.style.border = '0px';
     div.style.height = '0px';
     div.style.width = '0px';
+    // or // div.style.display = 'none';
+    // div.remove();
 }
 
 

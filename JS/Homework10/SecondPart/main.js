@@ -22,7 +22,7 @@ button.onclick = function (e){
         password: password
     }
     console.log(user);
-    first.username.value = '';
+    first.username.value =' ';
     first.email.value = '';
     second.age.value = '';
     second.password.value = '';

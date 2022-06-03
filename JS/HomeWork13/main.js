@@ -35,10 +35,10 @@ function eatBreakFast(areYouReady){
         },2500)
     })
 }
-function orderTaxi(DidYouEatYouBreakFast){
+function orderTaxi(didYouEatYouBreakFast){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            if(DidYouEatYouBreakFast === 'Done'){
+            if(didYouEatYouBreakFast === 'Done'){
                 resolve ('Taxi is coming')
             }else{
                 reject ('Brrrrr, you should eat something=)')
@@ -47,10 +47,10 @@ function orderTaxi(DidYouEatYouBreakFast){
         },2200)
     })
 }
-function GetToOffice(Taxi){
+function getToOffice(taxi){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            if(Taxi === 'Taxi is coming'){
+            if(taxi === 'Taxi is coming'){
                 resolve('Hello, our conference just started')
             }else{
                 reject('Sorry, you can not bypass, meeting has already started')
@@ -62,20 +62,34 @@ function GetToOffice(Taxi){
 
 
 
-wakeUp(true)
-.then(result=> {
-    console.log(`You woke up at ${result} AM`);
-    return getReady(result)})
-.then(result=> {
-    console.log(result);
-    return eatBreakFast(result)
-})
-.then(result=>{console.log(result)
-return orderTaxi(result)
-})
-.then(result=>{
-    console.log(result);
-    return GetToOffice(result);
-})
-.then(result=>console.log(result))
-.catch(reason => console.log(reason));
+// wakeUp(true)
+// .then(result=> {
+//     console.log(`You woke up at ${result} AM`);
+//     return getReady(result)})
+// .then(result=> {
+//     console.log(result);
+//     return eatBreakFast(result)
+// })
+// .then(result=>{console.log(result)
+// return orderTaxi(result)
+// })
+// .then(result=>{
+//     console.log(result);
+//     return getToOffice(result);
+// })
+// .then(result=>console.log(result))
+// .catch(reason => console.log(reason));
+
+async function schedule(){
+    const time = await wakeUp(true);
+    console.log(`You woke up at ${time} AM`);
+    const ready = await getReady(time);
+    console.log(ready);
+    const breakfast = await eatBreakFast(ready);
+    console.log(breakfast);
+    const ride = await orderTaxi(breakfast);
+    console.log(ride);
+    const office = await getToOffice(ride)
+    console.log(office);
+}
+schedule();

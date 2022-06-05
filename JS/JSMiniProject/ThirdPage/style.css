@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    background: #b7cadc;
+}
+.general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.post{
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+
+
+    height: 250px;
+    width: 30%;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    background: #6ec4ad;
+}
+
+.wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.comment{
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    height: 250px;
+    width: 23%;
+
+    margin: 1%;
+    padding: 1%;
+
+    background: #6ec4ad;
+}
+.comment:hover{
+    font-weight: bold;
+}
+
